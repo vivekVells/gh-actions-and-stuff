@@ -1,0 +1,17 @@
+name: 'Local Action'
+description: 'Runs a composite step action'
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/checkout@v3
+    - name: Build
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: 'npm'
+    - run: npm ci
+      shell: bash
+    - name: Test
+      run: npm run test
+      shell: bash

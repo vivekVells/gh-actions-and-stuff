@@ -28,7 +28,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3 # Necessary to access local action
       # - uses: ./.github/actions/test-action
-      - uses: ./.github/workflows/test
+      - uses: ./.github/workflows/test.yml
       # - uses: actions/checkout@v3
       #   with:
       #     fetch-depth: 1

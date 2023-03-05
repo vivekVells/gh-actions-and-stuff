@@ -27,7 +27,8 @@ jobs:
     needs: build
     steps:
       - uses: actions/checkout@v3 # Necessary to access local action
-      - uses: ./.github/actions/test-action
+      # - uses: ./.github/actions/test-action
+      - uses: ./.github/workflows/test
       # - uses: actions/checkout@v3
       #   with:
       #     fetch-depth: 1

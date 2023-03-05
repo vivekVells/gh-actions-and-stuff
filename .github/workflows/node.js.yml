@@ -28,6 +28,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    needs: build
     steps:
       - uses: actions/checkout@v2.3.4 # Necessary to access local action
       - uses: ./actions/test.yml
